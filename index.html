@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="https://i.ibb.co.com/WN59bgvJ/logo-sekolah.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIS Roudlotul Khuffadz</title>
+    <meta name="description" content="Website resmi MIS Roudlotul Khuffadz (MI Roudlotul Khuffadz). Informasi lengkap mengenai profil, pendaftaran, dan kegiatan sekolah.">
+    <meta name="keywords" content="mis roudlotul khuffadz, mi roudlotul khuffadz, roudlotul khuffadz, madrasah ibtidaiyah">
+    <meta name="google-site-verification" content="tpX58gFD9V7ERIJ4qAn-oeckLdYElHMZVYiw3HBmR2o" />
+    
+    <!-- Schema Markup untuk Nama Situs (Google Search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "MIS Roudlotul Khuffadz",
+      "url": "https://misroudlotulkhuffadz.vercel.app/"
+    }
+    </script>
+    
+    <!-- Open Graph Tags untuk Social Media/WhatsApp -->
+    <meta property="og:site_name" content="MIS Roudlotul Khuffadz">
+    <meta property="og:title" content="MIS Roudlotul Khuffadz">
+    <meta property="og:description" content="Website resmi MIS Roudlotul Khuffadz (MI Roudlotul Khuffadz). Informasi lengkap mengenai profil, pendaftaran, dan kegiatan sekolah.">
+    <meta property="og:image" content="https://i.ibb.co.com/WN59bgvJ/logo-sekolah.png">
+    <meta property="og:url" content="https://misroudlotulkhuffadz.vercel.app/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #F9F9F6;
+            --text-dark: #1A1A1A;
+            --text-muted: #666666;
+            --accent-color: #E25E3E;
+            --green-school: #17a24b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* --- NAVBAR PREMIUM --- */
+        .navbar {
+            padding: 24px 40px;
+            background: transparent;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+            color: var(--text-dark) !important;
+        }
+        
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin: 0 16px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .nav-link:not(.btn-green-school)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--green-school);
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link:not(.btn-green-school):hover::after {
+            width: 100%;
+        }
+
+        .btn-nav-dark {
+            background-color: var(--text-dark);
+            color: #fff !important;
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .btn-nav-dark:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-green-school {
+            background-color: #17a24b !important;
+            color: #fff !important;
+            border-radius: 50px;
+            padding: 10px 24px;
+            font-weight: 500;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-green-school:hover {
+            background-color: #148f3f !important;
+            transform: scale(1.05);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            padding: 60px 40px 100px;
+            background: radial-gradient(circle at top right, rgba(226, 94, 62, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(23, 162, 75, 0.1), transparent 40%);
+        }
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            max-width: 90%;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 40px;
+            max-width: 80%;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .glass-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 16px 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .glass-card-1 { top: 40px; right: -20px; }
+        .glass-card-2 { bottom: 60px; right: 40px; }
+
+        .hero-stats {
+            margin-top: 80px;
+            display: flex;
+            gap: 60px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 40px;
+        }
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* --- TENTANG KAMI (KAMAD) SECTION --- */
+        .custom-about-card {
+            background-color: #ffffff;
+            border-radius: 40px;
+            padding: 80px 60px;
+            margin: 0 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .kamad-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 380px;
+            border-radius: 24px;
+            overflow: visible;
+        }
+        .kamad-image-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            display: block;
+            background-color: #e2f5e9; /* Background hijau halus jika foto PNG transparan */
+            box-shadow: 0 20px 40px rgba(23, 162, 75, 0.15);
+        }
+        .kamad-badge {
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background-color: var(--green-school);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .bg-success-light { background-color: rgba(23, 162, 75, 0.1); }
+        .bg-warning-light { background-color: rgba(255, 193, 7, 0.1); }
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .visi-misi-card {
+            padding: 24px;
+            background: var(--bg-color);
+            border-radius: 20px;
+            height: 100%;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .visi-misi-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* --- STICKY SCROLL SECTION --- */
+        .sticky-container {
+            position: relative;
+            padding: 120px 40px;
+            background: #fff;
+            border-radius: 40px;
+            margin: 0 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+        }
+        .sticky-left {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+        .sticky-label {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .sticky-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 30px;
+        }
+        
+        .scroll-item {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0.3;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(20px);
+        }
+        .scroll-item.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-visual {
+            background: var(--bg-color);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        .scroll-visual img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .scroll-desc {
+            background: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 80%;
+            margin-top: -40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid var(--text-dark);
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-outline-custom:hover {
+            background: var(--text-dark);
+            color: #fff;
+        }
+
+        /* --- FOOTER CUSTOM --- */
+        .custom-footer {
+            background-color: #ffffff;
+            border-radius: 24px;
+            padding: 60px 40px 30px;
+            margin: 0 20px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .footer-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-socials a {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-socials a:hover {
+            opacity: 0.6;
+        }
+
+        .footer-col-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-dark);
+        }
+
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-legal-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-legal-links a {
+            color: var(--text-muted);
+            text-decoration: underline;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-legal-links a:hover {
+            color: var(--text-dark);
+        }
+
+        /* --- RESPONSIVITAS --- */
+        @media (max-width: 768px) {
+            .navbar { padding: 16px 20px; }
+            .navbar-nav {
+                margin-top: 16px;
+                text-align: center;
+                background: #fff;
+                padding: 16px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            }
+            .nav-item.ms-4 { margin-left: 0 !important; margin-top: 10px; }
+            
+            .hero-section { padding: 40px 20px 60px; text-align: center; }
+            .hero-title { font-size: 2.5rem; max-width: 100%; letter-spacing: -1px; }
+            .hero-subtitle { font-size: 1rem; max-width: 100%; }
+            .hero-section .d-flex.gap-3 { flex-direction: column; justify-content: center; }
+            .hero-section .btn { width: 100%; margin-bottom: 10px; }
+            .hero-stats { gap: 30px; margin-top: 40px; justify-content: center; flex-wrap: wrap; }
+            .hero-image-wrapper { margin-top: 40px; }
+            .hero-image-wrapper img { height: 400px; }
+            .glass-card { padding: 10px 16px; }
+            .glass-card h6 { font-size: 0.9rem; }
+            .glass-card-1 { top: 20px; right: 10px; }
+            .glass-card-2 { bottom: 20px; right: 10px; }
+
+            /* Responsive Tentang Kami */
+            .custom-about-card { padding: 40px 20px; margin: 0 10px; }
+            .kamad-image-wrapper { margin: 0 auto; max-width: 250px; }
+            .kamad-badge { bottom: -25px; right: 50%; transform: translateX(50%); }
+
+            .sticky-container { padding: 60px 20px; margin: 0 10px; }
+            .sticky-left { position: relative; top: 0; margin-bottom: 40px; text-align: center; }
+            .sticky-title { font-size: 2rem; }
+            .scroll-item { height: auto; padding-bottom: 40px; }
+            .scroll-visual { padding: 20px; }
+            .scroll-desc { max-width: 95% !important; }
+
+            .custom-footer { padding: 40px 20px 20px; margin: 0 10px 40px; }
+            .footer-col { margin-top: 40px; }
+            .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
+            .footer-socials { justify-content: center; }
+            .footer-brand, .footer-desc { text-align: center; margin-left: auto; margin-right: auto; }
+        }
+
+        /* --- ADDED ANIMATION STYLE --- */
+        .about-section .custom-about-card {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .about-section.in-view .custom-about-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://i.ibb.co.com/WN59bgvJ/logo-sekolah.png" alt="Logo" style="width: 36px; margin-right: 12px;">
+                MIS ROUDLOTUL KHUFFADZ
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link fw-bold text-success" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galery.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="materi.html">Materi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="panduanguru.html">Guru</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link btn-green-school" href="sipintarrk.html">SIPINTAR-RK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pe-lg-5">
+                    <h1 class="hero-title">Unggul dalam Prestasi, Berkarakter dalam Budaya.</h1>
+                    <p class="hero-subtitle">Mencetak generasi yang tidak hanya cerdas secara akademik, namun juga memiliki akhlak mulia dan menjunjung tinggi nilai-nilai agama Islam.</p>
+                    
+                    <div class="d-flex gap-3 align-items-center">
+                        <a href="pendaftaran.html" class="btn btn-green-school px-4 py-3 fs-5">Mulai Pendaftaran</a>
+                        <a href="https://www.facebook.com/mi.roudlotulkhuffadz.50?locale=id_ID" class="btn-outline-custom py-3 px-4 fs-5"><i class="fas fa-play"></i> Lihat Profil</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>180+</h3>
+                            <p>Siswa Aktif</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>12</h3>
+                            <p>Guru & Staf</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>25+</h3>
+                            <p>Total Prestasi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="hero-image-wrapper">
+                        <img src="https://i.ibb.co.com/PsfxS99P/Whats-App-Image-2026-05-26-at-08-44-13.jpg" alt="Siswa MIS Roudlotul Khuffadz">
+                        
+                        <div class="glass-card glass-card-1">
+                            <div class="text-success fs-3"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Terakreditasi</h6>
+                                <small class="text-muted">Kualitas Terjamin</small>
+                            </div>
+                        </div>
+                        <div class="glass-card glass-card-2">
+                            <div class="text-warning fs-3"><i class="fas fa-star"></i></div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Fasilitas Lengkap</h6>
+                                <small class="text-muted">Mendukung Belajar</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION BARU: TENTANG KAMI (PROFIL KAMAD & VISI MISI) -->
+    <section class="about-section mt-5" id="tentang">
+        <div class="container-fluid px-2 px-lg-4">
+            <div class="row align-items-center custom-about-card">
+                
+                <div class="col-lg-4 text-center text-lg-start mb-5 mb-lg-0">
+                    <!-- FIXED POSITION: WRAPPING IMAGE AND NAME INSIDE A NEW FLex-COLUMN DIV -->
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="kamad-image-wrapper mx-auto mx-lg-0 mb-4">
+                            <!-- Menggunakan Link Gambar Kepala Madrasah Anda -->
+                            <img src="https://i.ibb.co.com/4wm7HHXw/kamad.png" alt="Ryan Trisnawati, S.Pd - Kepala Madrasah">
+                            <div class="kamad-badge">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <!-- Removed mt-5 and added text-center -->
+                        <div class="text-center">
+                            <h4 class="fw-bold mb-1">Ryan Trisnawati, S.Pd</h4>
+                            <p class="text-success fw-medium mb-0">Kepala MIS Roudlotul Khuffadz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="about-content text-center text-lg-start">
+                        <div class="sticky-label text-success mb-2">Tentang Kami</div>
+                        <h2 class="fw-bold mb-4" style="font-size: 2.5rem; letter-spacing: -1px;">Membangun Generasi Cerdas & Berakhlakul Karimah.</h2>
+                        <p class="text-muted fs-5 mb-5" style="line-height: 1.8;">
+                            "Selamat datang di MIS Roudlotul Khuffadz. Kami berkomitmen memberikan pendidikan terbaik yang mengintegrasikan ilmu pengetahuan umum dan nilai-nilai ajaran agama Islam. Madrasah ini bukan sekadar tempat belajar, melainkan rumah kedua bagi anak-anak untuk tumbuh menjadi generasi yang tangguh, berprestasi, dan siap menghadapi tantangan masa depan dengan iman."
+                        </p>
+                        
+                        <div class="row mt-4 text-start">
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="visi-misi-card">
+                                    <div class="icon-box bg-success-light text-success mb-3">
+                                        <i class="fas fa-eye fs-4"></i>
+                                    </div>
+                                    <h5 class="fw-bold mb-3">Visi Kami</h5>
+                                    <p class="text-muted fs-6 mb-0" style="line-height: 1.6;">
+                                        Terwujudnya madrasah yang unggul dalam prestasi, tangguh berkarakter Islami, dan berwawasan lingkungan menuju generasi yang Rahmatan Lil 'Alamin.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="visi-misi-card">
+                                    <div class="icon-box bg-warning-light text-warning mb-3">
+                                        <i class="fas fa-bullseye fs-4"></i>
+                                    </div>
+                                    <h5 class="fw-bold mb-3">Misi Kami</h5>
+                                    <ul class="text-muted fs-6 ps-3 mb-0" style="line-height: 1.6;">
+                                        <li class="mb-2">Menanamkan aqidah yang kuat dan akhlakul karimah.</li>
+                                        <li class="mb-2">Melaksanakan pembelajaran yang aktif, kreatif, dan inovatif.</li>
+                                        <li>Mengembangkan potensi dan bakat siswa secara optimal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="sticky-container mt-5" id="ekskul">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="sticky-left">
+                        <div class="sticky-label text-success">Program Ekstrakurikuler</div>
+                        <h2 class="sticky-title">Fasilitas untuk mengembangkan bakat dan minat siswa secara optimal.</h2>
+                        <p class="text-muted fs-5">Kami menyediakan berbagai kegiatan di luar jam pelajaran untuk membentuk karakter, disiplin, dan kreativitas anak.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1">
+                    
+                    <div class="scroll-item active" id="item-1">
+                        <div class="scroll-visual">
+                            <img src="https://i.ibb.co.com/pv3KqMzn/IMG-6145.jpg" alt="Hadrah">
+                        </div>
+                        <div class="scroll-desc">
+                            <h4 class="fw-bold mb-2">Seni Hadrah</h4>
+                            <p class="text-muted mb-0">Mengembangkan kecintaan pada kesenian Islam dan shalawat nabi untuk menanamkan nilai religius sejak dini.</p>
+                        </div>
+                    </div>
+
+                    <div class="scroll-item" id="item-2">
+                        <div class="scroll-visual">
+                            <img src="https://i.ibb.co.com/nNwYwD2j/Whats-App-Image-2026-06-08-at-12-04-58.jpg" alt="Pramuka">
+                        </div>
+                        <div class="scroll-desc">
+                            <h4 class="fw-bold mb-2">Pramuka</h4>
+                            <p class="text-muted mb-0">Membentuk karakter disiplin, mandiri, jiwa kepemimpinan, dan kecintaan pada alam sekitar melalui kegiatan kepramukaan.</p>
+                        </div>
+                    </div>
+
+                    <div class="scroll-item" id="item-3">
+                        <div class="scroll-visual">
+                            <img src="https://i.ibb.co.com/W4QSvvj4/Screenshot-2026-06-08-120837.png" alt="Seni Tari">
+                        </div>
+                        <div class="scroll-desc">
+                            <h4 class="fw-bold mb-2">Seni Tari</h4>
+                            <p class="text-muted mb-0">Melestarikan budaya lokal dan nasional melalui gerak seni tari tradisional dan kreasi daerah bagi para siswa.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sticky-container mt-5" id="berita" style="background-color: #f4fdf6; border: 1px solid #e2f5e9;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="sticky-left">
+                        <div class="sticky-label text-success">Kabar & Update</div>
+                        <h2 class="sticky-title">Berita Terbaru dari Sekolah Kami.</h2>
+                        <p class="text-muted fs-5">Ikuti terus perkembangan, kegiatan, dan prestasi terbaru dari siswa-siswi serta guru MIS Roudlotul Khuffadz.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1" id="berita-scroll-container">
+                    
+                    <div id="loading-berita" class="d-flex flex-column justify-content-center align-items-center" style="height: 50vh;">
+                        <div class="spinner-border text-success mb-3" role="status" style="width: 3rem; height: 3rem;">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="text-muted fw-medium">Sedang menarik data berita...</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="custom-footer">
+        <div class="row">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <a href="index.html" class="footer-brand">
+                    <img src="https://i.ibb.co.com/WN59bgvJ/logo-sekolah.png" alt="Logo" style="width: 24px;">
+                    MIS ROUDLOTUL KHUFFADZ
+                </a>
+                <p class="footer-desc">
+                    Memberdayakan siswa untuk mengubah potensi mentah menjadi prestasi yang nyata — menjadikan pendidikan lebih mudah dipahami, dibagikan, dan diamalkan.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/mi.roudlotulkhuffadz.50?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/mi.roudlotulkhuffadz/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6282248266027?text=Assalamualaikum,%20saya%20ingin%20bertanya%20tentang%20informasi%20sekolah."><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-6 col-md-4 footer-col">
+                        <h5 class="footer-col-title">Program</h5>
+                        <ul class="footer-links">
+                            <li><a href="sipintarrk.html">Fitur Akademik</a></li>
+                            <li><a href="pendaftaran.html">Biaya & Pendaftaran</a></li>
+                            <li><a href="#ekskul">Ekstrakurikuler</a></li>
+                            <li><a href="#berita">Pembaruan Info</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 footer-col">
+                        <h5 class="footer-col-title">Sumber Daya</h5>
+                        <ul class="footer-links">
+                            <li><a href="galery.html">Dokumentasi</a></li>
+                            <li><a href="#">Pusat Bantuan</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 footer-col mt-4 mt-md-0">
+                        <h5 class="footer-col-title">Sekolah</h5>
+                        <ul class="footer-links">
+                            <li><a href="#tentang">Tentang Kami</a></li>
+                            <li><a href="https://maps.app.goo.gl/erHtXGyUEJXTAij87">Lokasi</a></li>
+                            <li><a href="https://wa.me/6282248266027?text=Assalamualaikum,%20saya%20ingin%20bertanya%20tentang%20prosedur%20bermitra.">Kemitraan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2026 MIS Roudlotul Khuffadz | Developed by W.B.P | All rights reserved
+            </div>
+            <div class="footer-legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="syarat.html">Terms of Service</a>
+                <a href="cookies.html">Cookies Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRF85cNbbwzolIsMRSWdej8gb9MUlk_jhuHOHjnEzPHmU8no3r9GjCFUQXkkOLnlEh/exec';
+
+        function observeScrollItems() {
+            const items = document.querySelectorAll('.scroll-item');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -40% 0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const parentContainer = entry.target.closest('.sticky-container');
+                        if(parentContainer) {
+                            const siblings = parentContainer.querySelectorAll('.scroll-item');
+                            
+                            siblings.forEach(item => item.classList.remove('active'));
+                            entry.target.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            items.forEach(item => observer.observe(item));
+        }
+
+        async function loadBerita() {
+            try {
+                const response = await fetch(scriptURL);
+                const data = await response.json();
+                
+                const container = document.getElementById('berita-scroll-container');
+                
+                if (data.berita && data.berita.length > 0) {
+                    let htmlContent = '';
+                    
+                    data.berita.forEach((item, index) => {
+                        let activeClass = index === 0 ? 'active' : '';
+                        
+                        htmlContent += `
+                            <div class="scroll-item ${activeClass}">
+                                <div class="scroll-visual position-relative">
+                                    <img src="${item.Gambar}" alt="${item.Judul}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px;">
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-3 px-3 py-2 shadow-sm" style="z-index: 5;">
+                                        ${item.Kategori}
+                                    </span>
+                                </div>
+                                <div class="scroll-desc mx-auto shadow-sm" style="max-width: 85%; margin-top: -35px; position: relative; z-index: 10;">
+                                    <h4 class="fw-bold mb-2 text-truncate" title="${item.Judul}">${item.Judul}</h4>
+                                    <p class="text-muted mb-4" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                        ${item.Deskripsi}
+                                    </p>
+                                    <a href="${item.Link}" target="_blank" class="btn-outline-custom" style="padding: 8px 20px; font-size: 0.9rem;">
+                                        Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    
+                    container.innerHTML = htmlContent;
+                    observeScrollItems();
+                    
+                } else {
+                    container.innerHTML = `
+                        <div class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+                            <p class="text-muted fs-5">Belum ada berita yang dipublikasikan.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error memuat berita:', error);
+                document.getElementById('loading-berita').innerHTML = `
+                    <div class="text-center text-danger mt-5">
+                        <i class="fas fa-exclamation-circle fs-2 mb-3"></i>
+                        <p class="mt-3 fw-medium">Gagal memuat berita dari database.<br>Pastikan koneksi internet stabil.</p>
+                    </div>
+                `;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            observeScrollItems();
+            loadBerita();
+
+            /* --- ADDED SCRIPT FOR TENTANG KAMI ANIMATION --- */
+            const aboutSection = document.getElementById('tentang');
+            const aboutObserverOptions = {
+                root: null,
+                rootMargin: '-15% 0px',
+                threshold: 0.2
+            };
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        aboutSection.classList.add('in-view');
+                    } else {
+                        // Optional: remove class when scrolling out of view
+                        // aboutSection.classList.remove('in-view');
+                    }
+                });
+            }, aboutObserverOptions);
+            aboutObserver.observe(aboutSection);
+        });
+    </script>
+</body>
+</html>
