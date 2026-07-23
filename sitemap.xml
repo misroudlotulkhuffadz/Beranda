@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/</loc>
     <lastmod>2026-07-08</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/pendaftaran.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/index.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/materi.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/pendaftaran.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/panduanguru.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/materi.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/sipintarrk.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/panduanguru.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/galery.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/sipintarrk.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://misroudlotulkhuffadz.github.io/web/galery.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/syarat.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/syarat.html</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/privacy.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/privacy.html</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://misroudlotulkhuffadz.vercel.app/cookies.html</loc>
+    <loc>https://misroudlotulkhuffadz.github.io/web/cookies.html</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
